@@ -1,3 +1,5 @@
 {
-  "jsxSingleQuote": true
+  "jsxSingleQuote": true,
+  "quoteProps": "preserve",
+  "singleQuote": true
 }
