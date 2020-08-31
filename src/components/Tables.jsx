@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "../assets/styles/components/Tables.css";
-import Tasks from "./Tasks";
-import { connect } from "react-redux";
+import React, { useState } from 'react';
+import '../assets/styles/components/Tables.css';
+import Tasks from './Tasks';
+import { connect } from 'react-redux';
 const Tables = (props) => {
   const [state, setState] = useState({ isAdding: false });
 
@@ -9,8 +9,8 @@ const Tables = (props) => {
     e.preventDefault();
     setState({ isAdding: true });
   };
-  const handleFinish = (e) => {
-    e.preventDefault();
+  const handleFinish = () => {
+    /*e.preventDefault();*/
     setState({ isAdding: false });
   };
 
@@ -26,7 +26,7 @@ const Tables = (props) => {
           <Tasks task={task} key={task.id} />
         ))}
       {state.isAdding ? (
-        <Tasks isAdding onFinish={handleFinish} idTable={props.key} />
+        <Tasks isAdding onFinish={handleFinish} idTable={props.idTable} />
       ) : null}
       <div className='card__add' onClick={handleClick}>
         <div className='card__icon'>
