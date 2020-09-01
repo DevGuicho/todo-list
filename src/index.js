@@ -11,17 +11,14 @@ const initialState = {
     {
       'id': 1,
       'name': 'today',
-      'isAdding': false,
     },
     {
       'id': 2,
       'name': 'tomorrow',
-      'isAdding': false,
     },
     {
       'id': 3,
       'name': 'next week',
-      'isAdding': false,
     },
   ],
   'tasks': [
@@ -89,6 +86,7 @@ const initialState = {
       'tableId': 3,
     },
   ],
+  'user': [],
 };
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, initialState, composeEnhancers());

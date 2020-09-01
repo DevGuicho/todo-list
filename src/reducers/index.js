@@ -5,6 +5,11 @@ const reducer = (state, action) => {
         ...state,
         tasks: [...state.tasks, action.payload],
       };
+    case 'ADD_TABLE':
+      return {
+        ...state,
+        tables: [...state.tables, action.payload],
+      };
     default:
       return state;
   }

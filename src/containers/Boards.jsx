@@ -1,7 +1,8 @@
-import React from "react";
-import "../assets/styles/containers/Boards.css";
-import Tables from "../components/Tables";
-import { connect } from "react-redux";
+import React, { useState } from 'react';
+import '../assets/styles/containers/Boards.css';
+import Tables from '../components/Tables';
+import { connect } from 'react-redux';
+import BtnTable from '../components/BtnTable';
 
 const Boards = ({ tables }) => {
   return (
@@ -9,12 +10,8 @@ const Boards = ({ tables }) => {
       {tables.map((table) => (
         <Tables name={table.name} key={table.id} idTable={table.id} />
       ))}
-      <button className='button'>
-        <div className='button__container'>
-          <i className='fas fa-plus button__container--icon'></i>
-          <span className='button__container--text'>CREATE A NEW BOARD</span>
-        </div>
-      </button>
+
+      <BtnTable />
     </div>
   );
 };

@@ -10,7 +10,6 @@ const Tables = (props) => {
     setState({ isAdding: true });
   };
   const handleFinish = () => {
-    /*e.preventDefault();*/
     setState({ isAdding: false });
   };
 

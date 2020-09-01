@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../assets/styles/components/Tasks.css';
 import { addTask } from '../actions';
 import { connect } from 'react-redux';
 import { Formik, Form, Field } from 'formik';
 const Tasks = (props) => {
-  const [state, setstate] = useState({ description: '' });
-  const handleChange = (event) => {
-    setstate({ description: event.target.value });
-    console.log(state.description);
-  };
   const handleAdd = (e) => {
     const { description, priority } = e;
     props.addTask({ id: 14, priority, description, tableId: props.idTable });
