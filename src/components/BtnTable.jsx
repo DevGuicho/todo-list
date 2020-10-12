@@ -13,18 +13,19 @@ const BtnTable = (props) => {
     setstate({ isAdding: false });
   };
   const handleAdd = (e) => {
-    const { id, name } = e;
-
+    const { name } = e;
+    const ids = props.tables.map((t) => t.id);
+    console.log(ids);
+    const id = ids[ids.length - 1] + 1;
     props.addTable({ id, name });
     setstate({ isAdding: false });
-    e.preventDefault();
   };
   return (
     <div>
       {state.isAdding ? (
         <div className='newTable'>
           <Formik
-            initialValues={{ id: 4, name: '' }}
+            initialValues={{ name: '' }}
             onSubmit={(values) => handleAdd(values)}
           >
             <Form className='newTable__form'>

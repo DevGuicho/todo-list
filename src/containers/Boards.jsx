@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../assets/styles/containers/Boards.css';
 import Tables from '../components/Tables';
 import { connect } from 'react-redux';
